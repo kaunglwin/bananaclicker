@@ -1,0 +1,282 @@
+<head>
+<title>BlackBird template </title>
+<script type="text/javascript">
+// object literal global 
+myMouse = {
+	x: 0,
+	y: 0
+}
+
+
+
+
+
+function myBlackbirdCode() {
+setInterval(Animate, 1000); 
+// run animate function miliseconds
+// ==================================================
+// ============= Blackbird Code below ===============
+// ==================================================
+
+
+
+
+// banana clicker 3.0  hybrid of Backbird code outside blackbird    
+
+
+// global variables 
+var clicks = 0;
+var mDown = false;
+var BananasPerClick = 1;
+//  arrays  =====================================
+var levelCosts = [20, 40, 90, 1880, 5800, 13600];
+var levelBonus = [1, 3, 9, 12, 24, 48, 196];
+var buttons = [];
+//  above is empty array soon to hold objects, below is length
+var bCount = levelCosts.length;
+
+function changeButton(bNum, bStatus) {
+   if (bStatus == 1) {
+      buttons[bNum].color = 1;
+   } else {
+      buttons[bNum].color = 0;
+   } 
+   // redraw the button
+   buttons[bNum].draw();
+} 
+
+function clickBanana() {
+   clicks += BananasPerClick;
+   // adds one to variable counter
+   var temp1 = "you have " + clicks + " Banana(s)";
+   var temp2 = "You get " + BananasPerClick + " Bananas per click";
+   updateScoreBoard();
+   for (var j = 0; j < bCount; j++) {
+      if (clicks >= levelCosts[j]) {
+         changeButton(j, 1);
+      }
+   }
+}
+
+
+function clickButton(whatButton) {
+   // check if they can afford this button
+   if (clicks >= levelCosts[whatButton]) {
+      clicks = clicks - levelCosts[whatButton];
+      // deduct points based on cost of prize
+      BananasPerClick = BananasPerClick + levelBonus[whatButton];
+      updateScoreBoard();
+      // refresh all the buttons based on new walet value (clicks)
+      for (var j = 0; j < bCount; j++) {
+         if (clicks < levelCosts[j]) {
+            changeButton(j, 0);
+         }
+      }    
+      // end for loop
+   }  
+}
+// end function mod
+
+function updateScoreBoard() {
+   // output the message to screen, formerly DOM , now text();
+   var tempString = "you have " + clicks + " Banana(s)";
+   var tempx = 260;
+   var tempy = 250;
+   textEraser(tempx, tempy, "white");
+   text(tempx, tempy, tempString);
+   var tempString = "You get " + BananasPerClick + " Bananas per click";
+   textEraser(tempx, tempy + 20, "white");
+   text(tempx, tempy + 20, tempString);
+}
+
+
+
+function buildBoard(buttons) {
+   text(240, 170, "click the banana or buttons to upgrade");
+   for (var i = 0; i < bCount; i++) {
+      buttons[i] = new bananaButton(0, (i * 45), 0, i);
+      // output
+      buttons[i].draw();
+   }
+
+} 
+// end of fuction game board
+
+
+
+
+
+// blackbird hack functions ================================
+function textEraser(x, y, color) {
+   rectangleWhite(x , y-20, 250, 20 );
+}
+// end textClean()
+// clean text eraser , cleans area first
+
+
+
+// start of OOP code ====================
+
+function bananaButton(startX, startY, startColor, bNum) {
+   // create a banana game button object
+   this.x = startX;
+   this.y = startY;
+   this.height = 25;
+   this.width = 220;
+   this.color = startColor;
+   this.bNumber = bNum;
+}
+
+
+bananaButton.prototype.draw = function() {
+   if (this.color == 0) {
+      rectangle(this.x, this.y, this.width, this.height, {fill: "red"});
+   } else {
+      rectangle(this.x, this.y, this.width, this.height, {fill: "green"});
+
+   }
+   // box lists text inside
+   var tempString = "Buy bonus of: " + levelBonus[this.bNumber] + "  Cost is $" + levelCosts[this.bNumber];
+   text(this.x, this.y + 15, tempString);
+}
+// end of method draw()
+
+bananaButton.prototype.clickStatus = function(x, y, bnum) {
+   // click location is inside Y range
+   if (((y > this.y && y <= this.y + this.height)) && ((x > this.x && x <= this.x + this.width))) {
+      var tempx = 300;
+      var tempy = 330;
+      var tempString = "detected b=" + bnum;
+      textEraser(tempx, tempy, "white");
+      text(tempx, tempy, tempString);
+      // handle the button update, one click is triggering 5 or more clicks 
+      clickButton(bnum);
+      return 1;
+   } else {
+      return 0;  
+   }
+}
+// end of method clickStatus
+
+
+
+// ========== main code ==============
+
+// build the board  then let animate handle the clicks 
+var p1 = new Point(220, 0);
+image(p1, "banana.png");
+buildBoard(buttons);
+updateScoreBoard();
+
+
+
+
+
+
+
+
+
+
+function Animate() {
+  var myMsg = "                ";
+   
+   // blackbird uses a mouse object, but the DOM has no such thing
+   // https://stackoverflow.com/questions/17130395/real-mouse-position-in-canvas
+   
+   // backbird code
+   // myMsg = mouse.x + "____" + mouse.y;  
+
+   // hacked code from MarkE on Stackoverflow
+   myMsg = myMouse.x + "____" + myMouse.y;  
+
+   // build a tracking string, then push to console
+   var mTrackTemp = "x=" + myMouse.x + " y=" + myMouse.y + "  " +  Math.random();
+   console.log( mTrackTemp );
+
+
+	// blackbird code is:     if (mouse.down == true) {
+
+
+   if (mouseDown == 1) {
+      var xc = mouse.x;
+      var yc = mouse.y;
+      var tempString = "x= " + xc + " y= " + yc + "  "; 
+      textEraser(300, 10, "white");
+      text(300, 10, tempString);
+      // for all boxes, was click inside the rectange
+      var i = 0;
+      var anyoneClicked = 0;
+
+      // have each button check itself for a click 
+      for (i = 0; i < bCount; i++) {
+         anyoneClicked = buttons[i].clickStatus(xc, yc, i);
+         // if we find anyone was clicked, end the for loop
+         if (anyoneClicked == 1) {
+            break;
+         }
+      }
+      // add a delay with a for loop
+      for (var k = 0; k <= 6500; k++) {
+         rectangle(0, 0, 1, 1, {fill: "red"});
+      }      
+
+      var tempx = 300;
+      var tempy = 300;
+      // debug code below 
+      textEraser(tempx, tempy, "white");
+      if (anyoneClicked == 1) {
+         text(tempx, tempy, "button clicked");
+      } else {
+         text(tempx, tempy, "banana was clicked");
+         clickBanana();
+         // call the function to register a banana click 
+      }
+
+   }
+   // end if mouse down
+
+
+
+
+}
+
+
+
+}
+// ====================================================
+// ==========  Blackbird code above ===================
+// ====================================================
+
+// below is standard Javascript DOM code :
+
+
+function myPageClick() {
+	rectangle(event.clientX,event.clientY,40,40);
+} // end function my Click Code
+
+
+
+
+</script>
+</head> <!-- end of head section -->
+
+
+
+<body id="myBody"   >
+	<script src="blackbird.js" type="text/javascript">	</script>
+	<script type="text/javascript">
+	// https://stackoverflow.com/questions/322378/javascript-check-if-mouse-button-down
+		var mouseDown = 0;
+		document.body.onmousedown = function() { 
+		    mouseDown = 1;
+		}
+
+		document.body.onmouseup = function() {
+		    mouseDown = 0;
+		}
+
+
+	</script>
+</body>
+
+

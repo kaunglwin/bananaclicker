@@ -1,0 +1,5 @@
+if (itwasclicked) {
+	var (costofupgraderbutton) = (costofupgraderbutton) + arrayname[buttonnumberid]
+};
+
+a new variable for how many times the button has been clicked

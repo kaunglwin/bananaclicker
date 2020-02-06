@@ -1,0 +1,869 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../kaungs.css">
+	<title>PUBG MOBILE</title>
+
+
+</head>
+
+<body>
+		<div id="container">
+			<!-- start of menu tabs -->
+		<div class="text1">
+			
+			 <h1>Banana Clicker</h1>
+
+		
+
+		<div class="menutab">
+    		<a href="../index.html"><h2> Main Page </h2> </a>
+		</div>
+
+    		
+		<div class="menutab">
+			<a href="index.html"><h2>Banana Clicker </h2> </a>
+		</div>
+
+		<div class="menutab">
+    		<a href="../page4.html"><h2> About</h2> </a>
+		</div>
+
+    
+    	
+    
+    <!-- close of menu tabs -->
+
+ <div id ="Game">
+
+
+	
+	<script type="text/javascript">
+		var clicks = 0;
+		var BananasPerClick = 1;
+		var green = "#00FF00";
+		var upgraderid = 0;
+		var counter30 = 0
+		var idk = 10;
+		//var counter will start at zero
+		
+
+
+
+		function changeCSS1(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader1()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+				
+				function changeCSS2(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader2()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+
+				function changeCSS3(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader3()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+
+				function changeCSS4(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader4()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+
+				function changeCSS5(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader5()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+
+				function changeCSS6(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader6()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+
+				function changeCSS7(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader7()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+				function changeCSSAutoClick(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("AutoClick1()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+				function changeCSSprestige(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Prestige()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "Lime";
+				}
+				
+
+
+			//start of function
+			
+			function changeToRed1(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader1()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+
+				function changeToRed2(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader2()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+
+				function changeToRed3(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader3()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+
+				function changeToRed4(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader4()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+
+				function changeToRed5(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader5()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+
+				function changeToRed6(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader6()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+
+				function changeToRed7(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Upgrader7()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+				function changeToRedAutoClick(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("AutoClick1()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+				function changeToRedPrestige(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Prestige()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+				function changeToRedClickDoubler1(){
+			
+				console.log("function launched");
+				var myId = document.getElementById("Prestige()");
+
+   					// use innerHTML to change the content
+   				myId.style.backgroundColor = "red";
+				}
+				
+
+		function FunctionClick() {
+			
+			clicks+=BananasPerClick;
+				//adds one to variable counter
+			var ID = document.getElementById("Kaung");
+				//gets element by ID
+			ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells you how many bananas you have
+			var Clickss = document.getElementById("Clicksss");
+			var myId = "";
+			Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//tells you how many bananas you get per click
+				// changeGreen();
+				if (clicks >= 50){
+				changeCSS1()
+			}	
+				if (clicks >= 150){
+				changeCSS2()
+			}
+				if (clicks >= 300){
+				changeCSS3()
+			}	
+				if (clicks >= 600){
+				changeCSS4()
+			}	
+				if (clicks >= 1200){
+				changeCSS5()
+			}	
+				if (clicks >= 2000){
+				changeCSSAutoClick()
+			}	
+				if (clicks >= 2400){
+				changeCSS6()
+			}	
+				if (clicks >= 4800){
+				changeCSS7()
+			}
+				if (clicks >= 100000000000000){
+				changeCSSprestige()
+			}
+			
+
+			if (clicks >= idk){
+
+			document.getElementById("ClickDoubler1()").style.display = "initial";
+				}	
+								
+			}
+		
+			//end of  changeCSS
+			//start of change to red 			  
+		
+			//end function
+		function Upgrader() {
+
+			if (clicks >= 50){
+				clicks -= 50;
+				BananasPerClick += 1;
+				//Ungrader one when clicked will subtract 50 and add 1 to every click				
+				var ID = document.getElementById("Kaung");
+				//gets element by ID
+			    ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells you how many bananas you have
+			    var Clickss = document.getElementById("Clicksss");
+				//this ID will tell you on screen how many bananas you get per click
+			    Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tells you how many bananas you are getting per click	
+				
+				}
+
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}
+			
+			}
+			//end function
+
+		function Upgrader2() {
+
+			if (clicks >= 150){
+				clicks -= 150;
+				BananasPerClick += 3;
+				//Upgrader two when clicked will subtract 150 and add 3 to every click				
+				var ID = document.getElementById("Kaung");
+				// gets element by id
+			    ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells you how many bananas you have
+			    var Clickss = document.getElementById("Clicksss");
+			   
+			    Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tell you how many bananas you are getting per click	
+				
+			 }
+			 	if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+
+			
+			}
+		}
+
+		function Upgrader3() {
+
+			if (clicks >= 300){
+				clicks -= 300;
+				BananasPerClick += 6;
+				//Upgrader 3 when clicked will subtract 300 and add 6 to every click				
+				var ID = document.getElementById("Kaung");
+				//gets element by Id
+			    ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells you how many bananas you have
+			    var Clickss = document.getElementById("Clicksss");
+
+			    Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tell you how many bananas you are getting per click	
+				
+				}			
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}
+		
+		}	
+		
+		function Upgrader4() {
+
+			if (clicks >= 600){
+				clicks -= 600;
+				BananasPerClick += 12;
+				//Upgrader 4 when clicked will subtract 600 and add 12 to every click				
+				var ID = document.getElementById("Kaung");
+
+			    ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells you how many bananas you have
+			    var Clickss = document.getElementById("Clicksss");
+
+			    Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tell you how many bananas you are getting per click	
+				
+				}	
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}		
+		
+			}
+
+		function Upgrader5() {
+
+			if (clicks >= 1200){
+				clicks -= 1200;
+				BananasPerClick += 24;
+				//Upgrader 5 when clicked will subtract 1200 and add 24 to every click				
+				var ID = document.getElementById("Kaung");
+
+			    ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells you how many bananas you have
+			    var Clickss = document.getElementById("Clicksss");
+
+			    Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tell you how many bananas you are getting per click	
+				
+				}	
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}			
+			
+			}
+			//function end
+		function Upgrader6() {
+
+			if (clicks >= 2400){
+				clicks -= 2400;
+				BananasPerClick += 48;
+				//Upgrader 6 when clicked will subtract 2400 and add 48 to every click
+				var ID = document.getElementById("Kaung");
+
+				ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells you how many bananas you have
+				var Clickss = document.getElementById("Clicksss");
+
+				Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tell you how many bananas you are getting per click	
+				
+				}		
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}
+			
+			}
+
+			//function end
+
+		function Upgrader7() {
+			
+			if (clicks >= 4800){
+				clicks -= 4800;
+				BananasPerClick += 96;
+				//Upgrader 7 when clicked will subtract 4800 and add 96 to every click
+				var ID = document.getElementById("Kaung");
+
+				ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells yo how many bananas you have
+				var Clickss = document.getElementById("Clicksss");
+
+				Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tell you how many bananas you are getiing per click
+				
+				}		
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}
+			
+			}
+
+		var autoclick = 1;
+		//variable autoclick
+		function AutoClick1() {
+			if (clicks >= 2000){
+				clicks -= 2000;
+			
+
+			//when clicked, it will take away 2000 bananas and add 1 banana per autoclick
+		
+
+				setInterval(
+					function(){
+					console.log(clicks);
+					clicks+=autoclick;
+
+				
+					console.log(autoclick);
+					//set interval will make the bananas add by itself aka autoclicker
+					var ID = document.getElementById("Kaung");
+
+					ID.innerHTML = "you have " + clicks + " Banana(s)";
+					//tells you how many bananas you have
+					
+					var Clickss = document.getElementById("Clicksss");
+
+					Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+
+				}
+				,100 );
+			}
+				//the 1000 means how fast the autoclicker will go
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}
+		
+				}		
+
+				
+		function Prestige() {
+			
+			if (clicks >= 100000000000000){
+				clicks -= 0;
+				BananasPerClick = 0;
+				clicks = 0;
+				autoclick = 0;
+				//this is a scam, when this button is clicked, all functions reset and all the progress you have made is all gone :)
+
+
+				var ID = document.getElementById("Kaung");
+
+				ID.innerHTML = "you got scammed";
+				//tells you how many bananas you have, you got scammed
+				var Clickss = document.getElementById("Clicksss");
+
+				Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//tells you how many bananas you get per click
+				
+				}	
+					if (clicks < 49){
+				changeToRed1()
+			}
+				if (clicks < 149){
+				changeToRed2()
+			}
+				if (clicks < 299){
+				changeToRed3()
+			}
+				if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}
+			
+		}
+
+
+		function ClickDoubler() {
+			if (clicks >= 10){
+				clicks -= idk;
+				BananasPerClick *= 2;
+				counter30++;
+				idk *= 10;
+				console.log(idk);
+				//this is a secret button, when clicked , u use no bananas but gain 7834 per click
+				var ID = document.getElementById("Kaung");
+					
+				ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tell you hoe many bananas you have
+				var Clickss = document.getElementById("Clicksss");
+
+				Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+
+				document.getElementById("ClickDoubler1()").style.display = "none";
+
+			}
+
+			if (clicks < 49){
+				changeToRed1()
+			}
+			if (clicks < 149){
+					changeToRed2()
+			}
+			if (clicks < 299){
+				changeToRed3()
+			}
+			if (clicks < 599){
+				changeToRed4()
+			}
+			if (clicks < 1199){
+				changeToRed5()
+			}
+			if (clicks < 2399){
+				changeToRed6()
+			}
+			if (clicks < 4799){
+				changeToRed7()
+			}
+			if (clicks < 1999){
+				changeToRedAutoClick()
+			}
+			if (clicks < 99999999999999){
+				changeToRedPrestige()
+			}
+				
+		}
+
+		function hack() {
+		
+				BananasPerClick += 999;
+				//gets you 999 per click
+				var ID = document.getElementById("Kaung");
+
+				ID.innerHTML = "you have " + clicks + " Banana(s)";
+				//tells yo how many bananas you have
+				var Clickss = document.getElementById("Clicksss");
+
+				Clickss.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+				//uses ID to tell you how many bananas you are getiing per click
+				}				
+
+
+	</script>
+<!-- end of javascript -->
+
+	<div id="presidentShelf">
+	 	President Shelf
+	 	<div id="presidents">
+	 	<img src="https://www.stickpng.com/assets/images/58430797a6515b1e0ad75b45.png" width="200px">
+	 	</div>
+	 </div>
+	
+	<div id="god" onClick = "hack()">
+	 	sdlkvgsruoi
+	 </div>
+
+	<h1 style="font-size:32pt"  > Banana Clicker <br> 
+		(Click the Banana) 
+	</h1>
+
+<img src="ban.png" onClick = "FunctionClick()" >
+
+<!-- http://yonanas.com/wp-content/themes/yonanasrefresh/images/xyo-Banana.png.pagespeed.ic.rs_B7mGmr4.png -->
+
+<!-- this makes the image a button and when the image is clicked, it makes bananas -->
+	
+
+
+	<p id="Kaung">
+	
+ 
+
+<!-- the element from before works here -->
+
+	</p>
+	<p id="Clicksss">
+
+	</p>
+
+<!-- button that works with function Upgrader -->
+	
+<div class="buttons" onCLick = "Upgrader()" id="Upgrader1()" >
+		(takes 50)Upgrade Banana + 1
+</div>
+<div class="buttons" onCLick = "Upgrader2()" id="Upgrader2()" >
+		(takes 150)Upgrade Banana + 3
+</div>
+<!-- button that works with function Upgrader2 -->
+
+<div class="buttons" onClick = "Upgrader3()" id="Upgrader3()" >
+		(takes 300)Upgrade Banana + 6
+</div>
+<!-- button that works with function Upgrader3 -->
+
+<div class="buttons" onClick = "Upgrader4()" id="Upgrader4()" >
+		(takes 600)Upgrade Banana + 12
+</div>
+<!-- button that works with function Upgrader4 -->
+
+<div class="buttons" onClick = "Upgrader5()" id="Upgrader5()" >
+		(takes 1,200)Upgrade Banana + 24
+</div>
+
+<div class="buttons" onClick = "AutoClick1()" id="AutoClick1()" >
+		(takes 2,000) Auto Click + 1
+</div>
+
+<div class="buttons" onClick = "Upgrader6()" id="Upgrader6()" >
+		(takes 2,400)Upgrader Banana + 48
+</div>
+
+<div class="buttons" onClick = "Upgrader7()" id="Upgrader7()" >
+		(takes 4,800)Upgrade Banana + 96
+</div>
+
+<div class="buttons" onClick = "Prestige()" id="Prestige()" >
+		(takes 100,000,000,000,000) PRESTIGE
+</div>
+
+<div class="buttons2" onClick = "ClickDoubler()" id="ClickDoubler1()" >
+	
+	<p>*you can only buy once</p>
+	(takes 100,000) x2 clicks 
+</div>
+
+<div class="presidentButton" onClick = "Purchase()">
+		Yes
+</div>
+
+</body>

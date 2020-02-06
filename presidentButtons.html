@@ -1,0 +1,132 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="b_clicker.css">
+	<title>Banana Clicker KL MOBILE</title>
+</head>
+
+<body id="Game" >
+	<img src="ban.png" onClick="clickBanana()" >
+	
+	<!-- how many presidents you posess -->
+	<p id="clickOutput">  </p>
+
+	<!-- presidents you get per click  -->
+	<p id="clickBonus">  </p>
+
+<script type="text/javascript">
+
+// prototyping function come first
+function changeButton( pNum, pStatus ){
+var presidentList = "Upgrader" + (bNum + 1)  ;
+console.log("presidentList:" + presidentList);
+var tempId = document.getElementById( presidentList );
+if (pStatus == 1 ) {
+	console.log(pStatus);
+	// use innerHTML to change the content
+	tempId.style.backgroundColor = "lime";
+    } else {
+		// use innerHTML to change the content
+		tempId.style.backgroundColor = "red";
+    } 
+} 
+// end of function changeButton
+
+function clickBanana() {
+	clicks+=BananasPerClick;  // add clicks to total
+	//finds and changes your clicks in HTML
+	var tempId = document.getElementById("clickOutput");
+	tempId.innerHTML = "you have " + clicks + " Banana(s)";
+	// changes presidents per click
+	tempId = document.getElementById("clickBonus");
+	tempId.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+	// j is the number id of a upgrader button, if checks if you have enough. then changes button color.
+	for ( var j = 0  ;  j < numberOfButtons ;  j++  ){
+		if ( clicks  >= presidentCost[j] ) {
+		changeButton( j, 1 );
+		}
+	}
+
+ 
+}
+//end function clickb
+
+function upgradeMod2( buttonNumber) {
+	// adjust button number to match our array index
+	var index = buttonNumber - 1;
+
+	console.log("clicked button:" + buttonNumber);
+	// index is how computers read arrays starting from zero
+	console.log("      index is:" + index);
+
+	if (clicks >= presidentCost[index] ){
+		clicks = clicks - presidentCost[buttonNumber - 1];
+		// logic deduct more points if they clicked a higher cost prize
+		// BananasPerClick += 1;
+		// legacy code
+		BananasPerClick = BananasPerClick + president[buttonNumber -1];
+		var tempId = document.getElementById("clickOutput");
+	    tempId.innerHTML = "you have " + clicks + " Banana(s)";
+	    var tempId = document.getElementById("clickBonus");
+	    tempId.innerHTML = "You get " + BananasPerClick + " Bananas per click";
+
+		for ( var j = 0  ;  j <  numberOfButtons ;  j++   ){
+			if ( clicks < presidentCost[j] ) {
+			changeButton( j, 0 );
+		}
+
+	}
+
+			//if clicked, the cost increases with an array called increase
+			for ( var w = 0  ;  w <  numberOfButtons ;  w++   ){
+	
+				//presidentCost[j] = presidentCost[w] + increase[w];
+
+			}
+			//console.log("increased by:" + increase)
+			//if clicked, the cost increases with an array called increase
+			
+			}
+		}  // end for loop  
+// endif
+
+//end function mod
+
+function buildBoard2() {
+
+    for( var i=1     ; i< president.length+1  ; i++   ) {
+    	buildButton(i);
+    }  
+}  	
+function buildButton2(pn) {
+	// dynamically build clickable game items
+	// drive y version build divs that we can click
+	// blackbird we build rectangles we can click 
+	// CreateElement , createTextNote, apptendChild 
+	var myElement = document.createElement("div");  
+	// this is kinda complex, we build the text inside our button  , CreateTextNode, appendChild 
+	var tempString="buy President"    +  president[pn-1]  +     " (cost=" + presidentCost[pn-1] + ") ";  
+	var myTextNode = document.createTextNode(tempString);  
+	myElement.appendChild(myTextNode);                
+	// add 3 attributes before we push that out on screen  class=  onclick=  id= 
+	// CreateAttribute, value, setAttributeNote for   attribute 1
+	var myAttribute = document.createAttribute("class");       
+	myAttribute.value = "buttons2";           
+	myElement.setAttributeNode(myAttribute);                          
+	// CreateAttribute, value, setAttributeNote for   attribute 2
+	var myAttribute = document.createAttribute("onclick");       
+	myAttribute.value = "upgradeMod("    + bn  + ")"  ;       ;           
+	myElement.setAttributeNode(myAttribute);                          
+	// CreateAttribute, value, setAttributeNote for   attribute 3
+	var myAttribute = document.createAttribute("id");       
+	myAttribute.value = "Upgrader"    + bn   ;           
+	myElement.setAttributeNode(myAttribute);                          
+
+	var myParentId = document.getElementById("Game")	
+	myParentId.appendChild(myElement);                     
+	// AppendChild   Append div to parent object, yellow div game
+	//if (itwasclicked) {
+	//var (costofupgraderbutton) = (costofupgraderbutton) + arrayname[buttonnumberid]
+//};
+}  // close of buildButton
+		

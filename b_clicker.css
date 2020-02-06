@@ -1,0 +1,205 @@
+div {
+   border: 2px solid black;
+   border-radius: 20px;
+   color:black;
+   clear: both;
+   margin-bottom: 5px;
+}
+
+body{
+	background-color: black;
+}
+
+#container {
+	background-color:grey;
+	height:1200px;
+	margin-right: 40px;
+	width:80%;
+	margin-left: 10%;
+	float: left;
+	clear: all;
+	border-radius: 30px;
+	opacity:0.9;
+	/*opacity makes it transparent*/
+}
+
+.text1 {
+	float:;left;
+	clear:bottom;
+	height:170px;
+	width:94%;
+	background-color: tomato;
+	margin-left:3%;
+	margin-right:3%;
+	border-radius: 30px;
+	border-color: blue;
+	text-align: center;
+	
+	
+
+}
+
+
+.text2 {
+	background-color: yellow;
+	width :94%;
+	height:900px;
+	border-radius:90px;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 50px;
+	border-color:black;	
+	float:left;
+	clear:both;
+	text-align: center;
+
+}
+
+
+
+.header {
+	width:30%;
+	height:200px;
+	float:left;
+	clear:both;
+	margin-left: 2%;
+	margin-right:2%;
+	background-color: yellow;
+	text-align: center;
+}
+
+
+.menutab {
+	background-color: pink;
+	float:left;
+	height:75px;
+	clear:none;
+	width:230px;
+	text-align:center;
+
+
+}
+
+#container2 {
+	background-color:grey;
+	height:1700px;
+	margin-right: 40px;
+	width:80%;
+	margin-left: 10%;
+	float: left;
+	clear: all;
+	border-radius: 30px;
+	opacity:0.9;
+}
+
+
+.TipsAndTricks {
+	background-color: yellow;
+	width :94%;
+	height:1400px;
+	border-radius:90px;
+	margin-top: 50px;
+	border-color:black;	
+	float:left;
+	clear:both;
+	text-align: center;
+	padding-left:2%;
+	padding-right:2%;
+	
+
+}
+
+
+.Clans {
+	background-color: red;
+	width :94%;
+	height:800px;
+	border-radius:90px;
+	margin-top: 50px;
+	border-color:black;	
+	float:left;
+	clear:both;
+	text-align: center;
+	padding-left:2%;
+	padding-right: 2%;
+}
+.AboutMe {
+	background-color: orange;
+	width :94%;
+	height:900px;
+	border-radius:90px;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 50px;
+	border-color:black;	
+	float:left;
+	clear:both;
+	text-align: center;
+}
+
+
+.LoadOuts {
+	background-color: yellow;
+	width :94%;
+	height:800px;
+	border-radius:90px;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 50px;
+	border-color:black;	
+	float:left;
+	clear:both;
+	text-align: center;
+
+}
+
+#container3 {
+	background-color:grey;
+	height:1200px;
+	margin-right: 40px;
+	width:80%;
+	margin-left: 10%;
+	float: left;
+	clear: all;
+	border-radius: 30px;
+	opacity:0.9;
+}
+
+#game {
+	background-color:yellow;
+	height: 900px;
+	margin-right: 40px;
+	width:80%;
+	margin-left: 10%;
+	float: left;
+	clear: all;
+	border-radius: 30px;
+	opacity:0.9;
+	text-align: center;
+	font-size: 20px;
+	color: green;
+}	
+
+.buttons {
+	border: 2px solid black;
+   	border-radius: 20px;
+   	color:black;
+	/*clear: both;*/
+    margin-bottom: 5px;
+   	background-color: red;
+   	/*width:40%;*/
+   	padding: 5px;
+   	float:left;
+}	
+
+.buttons2 {
+	border: 2px solid black;
+   	border-radius: 20px;
+   	color:black;
+   	background-color: lime;
+   	width:20%;
+	position:absolute;
+   	display:none;
+}	
+
+
